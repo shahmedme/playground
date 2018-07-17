@@ -1,23 +1,38 @@
-let lvl,
-    map = L.map('map', {
-      center: [23.74753, 90.39256],
-      zoom: 16
-    })
-  
-L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-map.on('zoom', function(){
-  lvl = map.getZoom();
-  document.getElementById('zmlvl').value = lvl;
-})
-
-function changeZoom(){
-  lvl = Number(document.getElementById('zmlvl').value);
-  map.setZoom(lvl);
-}
-
 $(document).ready(function(){
-    $('#zmlvl').on('change', function(){
-        changeZoom();
-    });
+  let map = L.map('map',{
+    center: [23.74581, 90.39347],
+    zoom: 15
+  });
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  
+  //Zoom change from input field
+  $(".zoomInput").on("keyup", function(){
+    let zoomLevel = Number(this.value);
+    map.setZoom(zoomLevel);
+  });
+
+  //Input value change when zooming
+  map.on("zoom", function(){
+    $(".zoomInput").val(map.getZoom());
+  })
+
+  //Remove zoom control when checkbox checked
+  $("#zoom-control").on('click', function(){
+    if($(this).is(':checked')){
+      map.removeControl(map.zoomControl);
+    }
+    else{
+      map.addControl(map.zoomControl);
+    }
+  });
+
+  //Remove attribution when checkbox checked
+  $("#attribution").on('click', function(){
+    if($(this).is(':checked')){
+      alert('hi')
+    }
+    else{
+      map.addAttribution();
+    }
+  });
 });
