@@ -29,6 +29,7 @@ $(document).ready(function(){
   //Remove attribution when checkbox checked
   $("#attribution").on('click', function(){
     if($(this).is(':checked')){
+      map.removeAttribution();
       alert('hi')
     }
     else{

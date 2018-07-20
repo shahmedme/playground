@@ -1,0 +1,6 @@
+.idea
+.git
+.vscode
+node_modules
+desktop.ini
+bower/node_modules
