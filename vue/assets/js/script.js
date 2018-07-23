@@ -6,7 +6,8 @@ let hi = {
         siteName: "Facebook",
         siteURL: "http://www.facebook.com",
         markUp: '<i>my name is <span style="color: red">shakil</span></i>',
-        year: 15
+        year: 15,
+        input: 20
     },
     methods: {
         fullName: function(){
@@ -21,6 +22,9 @@ let hi = {
         },
         sub: function(){
             this.year--;
+        },
+        input: function(){
+            console.log('You entered a number');
         }
     }
 }

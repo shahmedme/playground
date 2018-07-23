@@ -17,6 +17,8 @@
         <button v-on:click="add">Add Year</button>
         <button v-on:click="sub">Subtract Year</button>
         <div v-html="year"></div>
+        <input type="text" v-on:keyup="input()">
+        <div>{{input}}</div>
     </div>
     
 
