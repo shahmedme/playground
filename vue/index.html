@@ -18,9 +18,30 @@
         <button v-on:click="sub">Subtract Year</button>
         <div v-html="year"></div>
         <input type="text" v-on:keyup="input()">
-        <div>{{input}}</div>
+        <div v-if="seen">You see me</div>
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+        <ol>
+            <li v-for="item in todos">
+                {{item.dat}}
+            </li>
+        </ol>
+        <img v-bind:src="imgLink" alt="#">
+        <input type="text" v-model="imgLink" style="display: block">
     </div>
     
+    <div id="app">
+        <ol>
+            <todo-item></todo-item>
+        </ol>
+    </div>
+
+    <div id="components-demo">
+        <button-counter></button-counter>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
