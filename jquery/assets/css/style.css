@@ -10,3 +10,11 @@
 .red{
     color: red;
 }
+
+.nav-heading{
+    color: red;
+}
+
+a{
+    color: inherit;
+}

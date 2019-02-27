@@ -4,45 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue.js</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css'/>
 </head>
 <body>
-    <div id="test">
-        <h1>My name is {{firstName}}</h1>
-        <h1>Full Name is: {{fullName()}}</h1>
-        <a v-bind:href="siteURL">{{siteName}}</a>
-        <div v-html="markUp"></div>
-        <!-- <img v-bind:src="getLink()"> -->
-        <button v-on:click="add">Add Year</button>
-        <button v-on:click="sub">Subtract Year</button>
-        <div v-html="year"></div>
-        <input type="text" v-on:keyup="input()">
-        <div v-if="seen">You see me</div>
-        <ol>
-            <li v-for="todo in todos">
-                {{todo.text}}
-            </li>
-        </ol>
-        <ol>
-            <li v-for="item in todos">
-                {{item.dat}}
-            </li>
-        </ol>
-        <img v-bind:src="imgLink" alt="#">
-        <input type="text" v-model="imgLink" style="display: block">
+    <div id="app">
+        <navbar v-bind:buttonText="word" v-bind:logo="word"></navbar>
+        <h1>
+            {{ firstName }}
+        </h1>
+        <h1>
+            {{lastName}}
+        </h1>
+        <!-- <h1 v-on:click="modifyFullName">{{fullName()}}</h1>
+        <input type="text" v-model:value="showLink">
+        <a v-bind:href="link" v-if="showLink" v-bind:target="newWindow ? '_blank' : '_self'">Click Here</a>
+        <input type="text" v-model="link">
+        <label for="">New Window?</label>
+        <input type="text" v-model.boolean="newWindow">
+        <ul v-for="todo in todos">
+            <li>{{todo.title}}</li>
+        </ul> -->
+        <input type="text" v-model="word">
+        <h1>{{reverseWord()}}</h1>
+        <btn v-on:click="btnTextChange"></btn>
+        <shakil v-bind:designation="word"></shakil>
+        <h2>How's going on {{ firstName }}?</h2>
+        
     </div>
     
-    <div id="app">
-        <ol>
-            <todo-item></todo-item>
-        </ol>
-    </div>
-
-    <div id="components-demo">
-        <button-counter></button-counter>
-    </div>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
