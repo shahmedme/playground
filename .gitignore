@@ -4,3 +4,5 @@
 node_modules
 desktop.ini
 bower/node_modules
+*/node_modules
+*/*/node_modules
