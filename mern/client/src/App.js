@@ -1,15 +1,22 @@
 import React, { Component } from "react";
+import { Provider } from "react-redux";
 import Navbar from "./components/Navbar";
-import Cards from "./components/Cards";
-import "./App.css";
+import Lists from "./components/Lists";
+import AddTodo from "./components/AddTodo";
+import store from "./store";
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Navbar />
-        <Cards />
-      </React.Fragment>
+      <Provider store={store}>
+        <React.Fragment>
+          <Navbar />
+          <div class="pt-5">
+            <AddTodo />
+            <Lists />
+          </div>
+        </React.Fragment>
+      </Provider>
     );
   }
 }
