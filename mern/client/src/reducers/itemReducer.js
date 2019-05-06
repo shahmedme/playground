@@ -1,4 +1,3 @@
-import uuid from "uuid";
 import {
   ADD_ITEM,
   GET_ITEMS,
