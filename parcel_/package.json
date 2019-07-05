@@ -1,0 +1,19 @@
+{
+  "name": "parcel_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "parcel ./src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.3"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

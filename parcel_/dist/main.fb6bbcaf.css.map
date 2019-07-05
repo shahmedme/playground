@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass\\styles.scss"],"names":[],"mappings":"AAEA;EACI,OAHE","file":"main.fb6bbcaf.css","sourceRoot":"..\\src","sourcesContent":["$red: red;\r\n\r\n.rd {\r\n    color: $red;\r\n}"]}
