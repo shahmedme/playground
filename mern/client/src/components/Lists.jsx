@@ -36,13 +36,13 @@ class Lists extends Component {
   }
 }
 
-List.propTypes = {
-  getItems: PropTypes.func.isRequired,
-  item: PropTypes.object.isRequired
-};
+// List.propTypes = {
+//   getItems: PropTypes.func.isRequired,
+//   item: PropTypes.object.isRequired
+// };
 
 const mapStateToProps = state => ({
-  item: state.item
+  item: state.wola
 });
 
 export default connect(
